@@ -11,6 +11,8 @@ git clone https://github.com/MarkIvory2973/ProxyTest.git
 
 ## Usage
 
+⚠ ***Test the delay in MiHoMo before running the command (>1 times)***
+
 ```bash
 cd ProxyTest
 python ./main.py --help
