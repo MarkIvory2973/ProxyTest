@@ -28,3 +28,6 @@ python ./main.py --host 127.0.0.1 --port 9090 --https --excludes 剩余流量,�
 |--group|✓|-|Group name|
 |--k|-|0.5|Weight (0~1)|
 
+## The range of *k*
+
+![The range of k](https://raw.githubusercontent.com/MarkIvory2973/ProxyTest/main/imgs/k.png)
