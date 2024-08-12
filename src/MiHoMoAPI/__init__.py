@@ -1,5 +1,5 @@
-from . import vars
 import requests
+from . import vars
 
 def set_api_url(host="127.0.0.1", port="9090", https=False):
     if not https:
@@ -17,4 +17,4 @@ def set_api_url(host="127.0.0.1", port="9090", https=False):
     vars.api_url = ""
     
 def set_excludes(excludes_=[]):
-    vars.excludes = excludes_
+    vars.excludes = [exclude for exclude in excludes_.split(",") if exclude]
