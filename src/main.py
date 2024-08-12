@@ -14,13 +14,13 @@ def normalization(x):
     return x / numpy.std(x)
 
 @command()
-@option("--host", default="127.0.0.1")
-@option("--port", default="9090")
-@option("--https", is_flag=True)
-@option("--excludes", default="")
-@option("--group")
-@option("--k", default=0.5, type=float)
-def main(host, port, https, excludes, group, k):
+@option("--host", default="127.0.0.1", help="MiHoMo API host")
+@option("--port", default="9090", help="MiHoMo API port")
+@option("--https", is_flag=True, help="Use HTTPS")
+@option("--excludes", default="", help="Remove exclusions")
+@option("--group", help="Group name")
+@option("--weight", "-k", default=0.5, type=float, help="Weight (0~1)")
+def main(host, port, https, excludes, group, weight):
     version = set_api_url(host, port, https)
     if version:
         console.print(f"[[green bold]*[/]] Connected to MiHoMo([deep_sky_blue2 bold]v{version}[/])")
@@ -42,7 +42,7 @@ def main(host, port, https, excludes, group, k):
     delay = numpy.percentile(result, 50, 1, keepdims=True)
     scaled_stability = normalization(stability)
     scaled_delay = normalization(delay)
-    score = (1-k)*scaled_stability + k*scaled_delay
+    score = (1-weight)*scaled_stability + weight*scaled_delay
 
     table = Table(title="[deep_sky_blue2 italic]Result")
     table.add_column("Name", justify="left")
