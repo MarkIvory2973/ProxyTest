@@ -16,7 +16,7 @@ git clone https://github.com/MarkIvory2973/ProxyTest.git
 ```bash
 cd ProxyTest
 python ./main.py --help
-python ./main.py --host 127.0.0.1 --port 9090 --https --excludes 剩余流量,官址 --group SELECT --k 0.3
+python ./main.py --host 127.0.0.1 --port 9090 --https --excludes 剩余流量,官址 --group SELECT -k 0.3
 ```
 
 ## Parameters
