@@ -28,7 +28,7 @@ python ./main.py --host 127.0.0.1 --port 9090 --https --excludes 剩余流量,�
 |--https|-|-|Use HTTPS|
 |--excludes|-|-|Remove exclusions|
 |--group|✓|-|Group name|
-|--k|-|0.5|Weight (0~1)|
+|--weight,-k|-|0.5|Weight (0~1)|
 
 ## The range of *k*
 
