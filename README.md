@@ -15,8 +15,8 @@ git clone https://github.com/MarkIvory2973/ProxyTest.git
 
 ```bash
 cd ProxyTest
-python ./main.py --help
-python ./main.py --host 127.0.0.1 --port 9090 --https --excludes 剩余流量,官址 --group SELECT -k 0.3
+python src/main.py --help
+python src/main.py --host 127.0.0.1 --port 9090 --https --excludes 剩余流量,官址 --group SELECT -k 0.3
 ```
 
 ![Usage](https://raw.githubusercontent.com/MarkIvory2973/ProxyTest/main/imgs/Usage-1.png)
@@ -24,7 +24,7 @@ python ./main.py --host 127.0.0.1 --port 9090 --https --excludes 剩余流量,�
 ## Parameters
 
 |Parameter|Required|Default|Description|
-|:-:|:-:|:-:|:-:|
+|:-|:-:|:-|:-|
 |--host|-|127.0.0.1|MiHoMo API host|
 |--port|-|9090|MiHoMo API port|
 |--https|-|-|Use HTTPS|
