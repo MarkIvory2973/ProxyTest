@@ -21,7 +21,7 @@ jobs:
       run: cd src
 
     - name: Init module
-      run: go mod init
+      run: go mod init ProxyTest
 
     - name: Build
       run: go build ./main.go
