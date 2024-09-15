@@ -18,6 +18,6 @@ jobs:
         go-version: '1.22'
 
     - name: Build
+      working-directory: src
       run: |
-        cd src
         go build ./main.go
