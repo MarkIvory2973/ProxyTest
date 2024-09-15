@@ -24,4 +24,4 @@ jobs:
     - name: Build
       working-directory: src
       run: |
-        GOOS=${{ matrix.os }} GOARCH=${{ matrix.arch }} go build ./main.go -o proxytest-${{ matrix.os }}-${{ matrix.arch }}
+        GOOS=${{ matrix.os }} GOARCH=${{ matrix.arch }} go build -o proxytest-${{ matrix.os }}-${{ matrix.arch }}
