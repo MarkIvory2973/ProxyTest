@@ -20,8 +20,13 @@ jobs:
     - name: Change workdir
       run: cd src
 
+    - name: Debug
+      run: ls
+
     - name: Init module
-      run: go mod init ProxyTest
+      run: |
+        go mod init ProxyTest
+        go mod tidy
 
     - name: Build
       run: go build ./main.go
