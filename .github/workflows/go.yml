@@ -9,6 +9,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        os: [windows-latest, ubuntu-latest, macos-latest]
+        arch: [arm64, amd64, 386]
     steps:
     - uses: actions/checkout@v4
 
@@ -20,4 +24,4 @@ jobs:
     - name: Build
       working-directory: src
       run: |
-        go build ./main.go
+        GOOS=${{ matrix.os }} GOARCH=${{ matrix.arch }} go build ./main.go -o proxytest-${{ matrix.os }}-${{ matrix.arch }}
