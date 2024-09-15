@@ -18,7 +18,10 @@ jobs:
         go-version: '1.22'
 
     - name: Change workdir
-      run: ls
+      run: cd src
+
+    - name: a
+      run: go env
 
     - name: Build
       run: go build ./main.go
