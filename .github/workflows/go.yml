@@ -28,3 +28,7 @@ jobs:
       working-directory: src
       run: |
         GOOS=${{ matrix.os }} GOARCH=${{ matrix.arch }} go build -o proxytest-${{ matrix.os }}-${{ matrix.arch }}
+
+    - name: Debug
+      run: |
+        ls
