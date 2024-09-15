@@ -17,11 +17,7 @@ jobs:
       with:
         go-version: '1.22'
 
-    - name: Change workdir
-      run: tree .
-
-    - name: Init module
-      run: go mod tidy
-
     - name: Build
-      run: go build ./main.go
+      run: |
+        cd src
+        go build ./main.go
