@@ -31,4 +31,4 @@ jobs:
 
     - name: Debug
       run: |
-        ls
+        ls src
