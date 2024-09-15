@@ -5,7 +5,6 @@ A proxy testing program for MiHoMo.
 ## Installation
 
 ```bash
-pip install numpy click rich requests
 git clone https://github.com/MarkIvory2973/ProxyTest.git
 ```
 
@@ -14,12 +13,10 @@ git clone https://github.com/MarkIvory2973/ProxyTest.git
 ⚠ ***Test the delay in MiHoMo before running the command (>1 times)***
 
 ```bash
-cd ProxyTest
-python src/main.py --help
-python src/main.py --host 127.0.0.1 --port 9090 --https --excludes 剩余流量,官址 --group SELECT -k 0.3
+cd ProxyTest/src
+go run ./main.go --help
+go run ./main.go --group SELECT --weight 0.3
 ```
-
-![Usage](https://raw.githubusercontent.com/MarkIvory2973/ProxyTest/main/imgs/Usage-1.png)
 
 ## Parameters
 
@@ -27,10 +24,9 @@ python src/main.py --host 127.0.0.1 --port 9090 --https --excludes 剩余流量,
 |:-|:-:|:-|:-|
 |--host|-|127.0.0.1|MiHoMo API host|
 |--port|-|9090|MiHoMo API port|
-|--https|-|-|Use HTTPS|
-|--excludes|-|-|Remove exclusions|
+|--tls|-|-|Use TLS|
 |--group|✓|-|Group name|
-|--weight,-k|-|0.5|Weight (0~1)|
+|--weight|-|0.5|Weight (0~1)|
 
 ## The range of *k*
 

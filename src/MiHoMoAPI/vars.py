@@ -1,2 +1,0 @@
-api_url = ""
-excludes = []
