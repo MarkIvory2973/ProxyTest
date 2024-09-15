@@ -18,15 +18,10 @@ jobs:
         go-version: '1.22'
 
     - name: Change workdir
-      run: cd src
-
-    - name: Debug
-      run: ls
+      run: tree .
 
     - name: Init module
-      run: |
-        go mod init ProxyTest
-        go mod tidy
+      run: go mod tidy
 
     - name: Build
       run: go build ./main.go
