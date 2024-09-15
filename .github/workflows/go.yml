@@ -20,8 +20,8 @@ jobs:
     - name: Change workdir
       run: cd src
 
-    - name: Set Go env
-      run: go env -w GO111MODULE=on
+    - name: Init module
+      run: go mod init
 
     - name: Build
       run: go build ./main.go
